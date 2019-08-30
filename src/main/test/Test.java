@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * @Auther: zhaomengyi
@@ -25,6 +26,8 @@ public class Test {
 
         Book book = ss.selectOne("com.mikemyzhao.entity.selectBook",1);
         System.out.println(book);
+        List<Book> books = ss.selectList("com.mikemyzhao.entity.selectBookList");
+        System.out.println(books);
         ss.close();
     }
 }

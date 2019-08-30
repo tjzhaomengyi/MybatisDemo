@@ -7,4 +7,8 @@
     <select id="selectBook" resultType="com.mikemyzhao.entity.Book" parameterType="int">
         select * from book where bid = #{bid}
     </select>
+
+    <select id="selectBookList" resultType="book">
+        select * from book
+    </select>
 </mapper>
